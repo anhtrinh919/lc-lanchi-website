@@ -1,0 +1,180 @@
+/* ==========================================================================
+   LanChi Mart — Color & Type Tokens
+   Source: GUILINE BRANDING.pdf (visual identity standards guide)
+   ========================================================================== */
+
+/* --- Fonts ----------------------------------------------------------------
+   PRIMARY (per brand guide): Aptos (Bold + Light + Regular + Italic)
+   SUBSTITUTE in this system: Inter (closest open-source neo-grotesque
+   with similar x-height and Vietnamese diacritics support).
+   ⚠️  Replace with real Aptos webfonts when licensed.
+--------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap');
+
+:root {
+  /* === BRAND COLORS — direct from the guide (page A.07 / B.01) ============ */
+  --lanchi-red:        #EE1C26;  /* Primary brand. THƯƠNG HIỆU. */
+  --lanchi-amber:      #FFC220;  /* Promo accent. KHUYẾN MÃI.  */
+  --lanchi-dark-grey:  #7D7D7D;  /* Information / tertiary.    */
+  --lanchi-light-grey: #ECECEC;  /* Surfaces / dividers.        */
+  --lanchi-black:      #0D0D0D;  /* Type / contrast.            */
+  --lanchi-white:      #FFFFFF;
+
+  /* === CATEGORY COLORS (theo ngành hàng) ================================== */
+  --cat-fmcg:     #EE1C26;  /* same as brand red — "Hóa mỹ phẩm" */
+  --cat-fresh:    #6EAA3D;  /* "Tươi sống / Rau củ" */
+  --cat-bakery:   #7D7D7D;  /* "Bakery / BKR" */
+  --cat-softline-blue: #2BB1E5;  /* fashion children */
+  --cat-softline-pink: #E91E78;  /* fashion women */
+  --cat-softline-yellow: #FFC220;/* fashion seasonal */
+
+  /* === SEMANTIC TOKENS ==================================================== */
+  --bg:           var(--lanchi-white);
+  --bg-soft:      var(--lanchi-light-grey);
+  --bg-inverse:   var(--lanchi-black);
+
+  --fg:           var(--lanchi-black);
+  --fg-muted:     var(--lanchi-dark-grey);
+  --fg-inverse:   var(--lanchi-white);
+
+  --accent:       var(--lanchi-red);
+  --accent-fg:    var(--lanchi-white);
+  --promo:        var(--lanchi-amber);
+  --promo-fg:     var(--lanchi-black);
+
+  --border:       #DDDDDD;
+  --border-strong:var(--lanchi-black);
+
+  /* === TYPE FAMILIES ====================================================== */
+  --font-display: 'Inter', 'Aptos', system-ui, sans-serif;
+  --font-body:    'Inter', 'Aptos', system-ui, sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', 'Cascadia Code', monospace;
+
+  /* === TYPE SCALE =========================================================
+     Per A.08 + B.01: bold 2x / light 1x. Headings ALWAYS Aptos Extra Bold,
+     uppercase, left-aligned. Body Aptos Regular. Italic for ghi chú/notes. */
+  --fs-xl:    clamp(48px, 6vw, 80px); /* TIÊU ĐỀ XL — wall-sized */
+  --fs-h1:    clamp(36px, 4.4vw, 56px);
+  --fs-h2:    clamp(28px, 3.2vw, 40px);
+  --fs-h3:    20px;                   /* Phụ đề */
+  --fs-body:  16px;                   /* Nội dung */
+  --fs-small: 14px;                   /* Ghi chú */
+  --fs-xs:    12px;
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.2;
+  --lh-body:  1.5;
+
+  --fw-light:  300;
+  --fw-regular:400;
+  --fw-medium: 500;
+  --fw-bold:   700;
+  --fw-xbold:  800;
+  --fw-black:  900;
+
+  /* === SPACING (8pt rhythm) =============================================== */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+
+  /* === RADIUS ============================================================= */
+  /* Brand uses sharp rectangles for signage. Soft radius only for color-chip
+     callouts (page A.07) and merch cards. Default to NO radius. */
+  --radius-0: 0px;
+  --radius-sm: 4px;
+  --radius-md: 12px;   /* color-chip style */
+  --radius-lg: 20px;   /* product card */
+  --radius-pill: 999px;
+
+  /* === SHADOW =============================================================
+     The brand is print-first. Shadows are minimal in source material.
+     Provided here for screen UI use only. */
+  --shadow-sm: 0 1px 2px rgba(13,13,13,0.06);
+  --shadow-md: 0 4px 12px rgba(13,13,13,0.08);
+  --shadow-lg: 0 12px 32px rgba(13,13,13,0.12);
+
+  /* === BORDERS ============================================================ */
+  --bw-1: 1px;
+  --bw-2: 2px;
+  --bw-3: 3px;       /* "L" stroke equivalent — used for emphasis */
+  --bw-4: 4px;
+
+  /* === MOTION ============================================================= */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out:      cubic-bezier(0, 0, 0.2, 1);
+  --dur-fast:   120ms;
+  --dur-base:   200ms;
+  --dur-slow:   320ms;
+}
+
+/* ==========================================================================
+   Base type — semantic elements
+   ========================================================================== */
+html { font-family: var(--font-body); color: var(--fg); background: var(--bg); }
+body { font-size: var(--fs-body); line-height: var(--lh-body); }
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-xbold);
+  letter-spacing: -0.01em;
+  line-height: var(--lh-tight);
+  text-transform: uppercase;       /* per B.01 — TIÊU ĐỀ luôn extra bold, hoa  */
+  color: var(--fg);
+  margin: 0 0 var(--space-3);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); text-transform: none; letter-spacing: 0; }
+h4 { font-size: var(--fs-body); font-weight: var(--fw-bold); text-transform: uppercase; letter-spacing: 0.04em; }
+
+p { margin: 0 0 var(--space-3); text-wrap: pretty; }
+small, .small { font-size: var(--fs-small); color: var(--fg-muted); }
+em, i, .note { font-style: italic; color: var(--fg-muted); }
+
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { opacity: 0.8; }
+
+code, kbd, samp { font-family: var(--font-mono); font-size: 0.95em; }
+
+/* ==========================================================================
+   Brand utility classes
+   ========================================================================== */
+.lc-eyebrow {           /* small uppercase label */
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+}
+
+.lc-block-label {       /* the signature signage block (page B.01) */
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--lanchi-red);
+  color: var(--lanchi-white);
+  font-weight: var(--fw-xbold);
+  font-size: var(--fs-h3);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+.lc-block-label--promo { background: var(--lanchi-amber); color: var(--lanchi-black); }
+.lc-block-label--combo { background: var(--lanchi-dark-grey); color: var(--lanchi-white); }
+.lc-block-label--combo b { color: var(--lanchi-amber); }
+.lc-block-label--fresh { background: var(--cat-fresh); color: var(--lanchi-white); }
+
+.lc-price {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-style: italic;
+  color: var(--lanchi-red);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
