@@ -36,7 +36,7 @@ function LCMServices() {
           {items.map((s, i) => (
             <article className="lcm-service" key={s.name}>
               <span className="lcm-service__num">0{i + 1}</span>
-              <span className="lcm-service__icon"><i className={`ph ${s.icon}`}></i></span>
+              <span className="lcm-service__icon"><i className={`ph-fill ${s.icon}`}></i></span>
               <h3 className="lcm-service__name">{s.name}</h3>
               <p className="lcm-service__desc">{s.desc}</p>
             </article>

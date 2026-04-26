@@ -354,32 +354,32 @@ button { font: inherit; cursor: pointer; }
 .lcm-products { background: var(--lanchi-light-grey); }
 .lcm-products__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 4px;
 }
 .lcm-product {
   position: relative;
-  padding: 36px 28px 36px;
-  min-height: 360px;
+  padding: 32px 22px 32px;
+  min-height: 340px;
   display: flex; flex-direction: column;
   color: var(--fg);
   overflow: hidden;
   transition: transform var(--dur-base) var(--ease-standard);
 }
 .lcm-product__icon {
-  font-size: 56px; line-height: 1;
-  margin-bottom: 28px;
+  font-size: 52px; line-height: 1;
+  margin-bottom: 24px;
   display: inline-block;
 }
 .lcm-product__num {
-  position: absolute; top: 24px; right: 24px;
+  position: absolute; top: 20px; right: 20px;
   font-family: var(--font-display);
-  font-weight: 900; font-size: 14px; letter-spacing: 0.1em;
+  font-weight: 900; font-size: 13px; letter-spacing: 0.1em;
   opacity: 0.55;
 }
 .lcm-product__title {
   font-family: var(--font-display);
-  font-weight: 900; font-size: 32px; line-height: 1; letter-spacing: -0.01em;
+  font-weight: 900; font-size: 26px; line-height: 1; letter-spacing: -0.01em;
   text-transform: uppercase;
   margin: 0 0 8px;
 }
@@ -418,39 +418,42 @@ button { font: inherit; cursor: pointer; }
   margin: 18px 0 0;
 }
 .lcm-services__grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
 }
 .lcm-service {
   background: var(--lanchi-white);
   border: 2px solid var(--lanchi-black);
-  padding: 28px 24px 28px;
+  padding: 56px 56px 56px;
   position: relative;
   transition: background var(--dur-base);
+  min-height: 320px;
+  display: flex; flex-direction: column;
 }
 .lcm-service:hover { background: var(--lanchi-light-grey); }
 .lcm-service__num {
-  position: absolute; top: 16px; right: 18px;
-  font-weight: 900; font-size: 13px; letter-spacing: 0.1em;
+  position: absolute; top: 24px; right: 28px;
+  font-weight: 900; font-size: 14px; letter-spacing: 0.1em;
   color: var(--lanchi-red);
 }
 .lcm-service__icon {
-  width: 60px; height: 60px;
+  width: 112px; height: 112px;
   display: grid; place-items: center;
   background: var(--lanchi-red); color: var(--lanchi-white);
-  font-size: 28px;
-  margin-bottom: 22px;
+  font-size: 56px;
+  margin-bottom: 36px;
 }
 .lcm-service:nth-child(1) .lcm-service__icon { background: var(--lanchi-red); }
-.lcm-service:nth-child(2) .lcm-service__icon { background: var(--lanchi-black); }
+.lcm-service:nth-child(2) .lcm-service__icon { background: var(--lanchi-amber); color: var(--lanchi-black); }
 .lcm-service:nth-child(3) .lcm-service__icon { background: var(--cat-softline-pink); }
-.lcm-service:nth-child(4) .lcm-service__icon { background: var(--cat-fresh); }
+.lcm-service:nth-child(4) .lcm-service__icon { background: var(--cat-softline-blue); }
 .lcm-service__name {
   font-family: var(--font-display);
-  font-weight: 900; font-size: 22px; text-transform: uppercase; letter-spacing: -0.005em;
-  margin: 0 0 6px;
+  font-weight: 900; font-size: 40px; line-height: 1; text-transform: uppercase; letter-spacing: -0.01em;
+  margin: 0 0 14px;
 }
 .lcm-service__desc {
-  font-size: 14px; line-height: 1.5; color: rgba(0,0,0,0.7);
+  font-size: 16px; line-height: 1.55; color: rgba(0,0,0,0.72);
+  max-width: 360px;
   margin: 0;
 }
 
@@ -648,8 +651,11 @@ button { font: inherit; cursor: pointer; }
 @media (max-width: 1024px) {
   .lcm-hero__inner { grid-template-columns: 1fr; gap: 32px; }
   .lcm-hero__chip { left: 0; bottom: -24px; }
-  .lcm-products__grid { grid-template-columns: repeat(2, 1fr); }
+  .lcm-products__grid { grid-template-columns: repeat(3, 1fr); }
   .lcm-services__grid { grid-template-columns: repeat(2, 1fr); }
+  .lcm-service { padding: 40px 36px; }
+  .lcm-service__icon { width: 88px; height: 88px; font-size: 44px; }
+  .lcm-service__name { font-size: 32px; }
   .lcm-stores__grid { grid-template-columns: repeat(3, 1fr); }
   .lcm-stats__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .lcm-stat { border-left: 0; padding: 0; }
@@ -663,6 +669,7 @@ button { font: inherit; cursor: pointer; }
   .lcm-section { padding: 64px 0; }
   .lcm-products__grid { grid-template-columns: 1fr; }
   .lcm-services__grid { grid-template-columns: 1fr; }
+  .lcm-service { padding: 36px 28px; }
   .lcm-stores__grid { grid-template-columns: repeat(2, 1fr); }
   .lcm-footer__grid { grid-template-columns: 1fr; }
   .lcm-topbar__inner { gap: 12px; font-size: 11px; }

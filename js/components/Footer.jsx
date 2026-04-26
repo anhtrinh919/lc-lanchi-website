@@ -57,7 +57,7 @@ function LCMFooter() {
               <li><a href="tel:19000669" style={{color:'rgb(225, 0, 0)'}}><i className="ph ph-phone" style={{marginRight:6}}></i>1900 066 698</a></li>
               <li><a href="mailto:phongmarketing@lanchi.vn"><i className="ph ph-envelope" style={{marginRight:6}}></i>phongmarketing@lanchi.vn</a></li>
               <li><span><i className="ph ph-map-pin" style={{marginRight:6}}></i>Khu Vai Cời, Sơn Tây, Hà Nội</span></li>
-              <li><span><i className="ph ph-clock" style={{marginRight:6}}></i>7:30 – 22:00 hằng ngày</span></li>
+              <li><span><i className="ph ph-clock" style={{marginRight:6}}></i>8:00 – 22:00 hằng ngày</span></li>
             </ul>
           </div>
 

@@ -17,7 +17,7 @@ function LCMStats() {
           <div className="lcm-stat__label">Phục vụ gia đình Việt</div>
         </div>
         <div className="lcm-stat">
-          <div className="lcm-stat__num">12<sup>k+</sup></div>
+          <div className="lcm-stat__num">20<sup>k+</sup></div>
           <div className="lcm-stat__label">Mã hàng tiêu dùng mỗi ngày</div>
         </div>
       </div>

@@ -5,7 +5,7 @@ function LCMHeader() {
       <div className="lcm-topbar">
         <div className="lcm-wrap lcm-topbar__inner">
           <span><i className="ph ph-phone"></i> Hotline 1900&nbsp;1234</span>
-          <span><i className="ph ph-clock"></i> Mở cửa 7:30 – 22:00 hằng ngày</span>
+          <span><i className="ph ph-clock"></i> Mở cửa 8:00 – 22:00 hằng ngày</span>
           <span className="spacer"></span>
           <span><i className="ph ph-translate"></i> Tiếng Việt</span>
         </div>

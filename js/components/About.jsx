@@ -28,9 +28,9 @@ function LCMAbout() {
 
           <div className="lcm-about__copy">
             <p className="lcm-about__lede">
-              Khởi đầu từ Vĩnh Phúc năm {startYear}. Hôm nay {stats.storeCount} siêu thị
+              Khởi đầu từ <b>Sơn Tây</b> năm {startYear}. Hôm nay {stats.storeCount} siêu thị
               tại {stats.provinces} tỉnh thành. Một thành viên của
-              <b> Central Retail Việt Nam</b> từ 2021.
+              <b> Central Retail Việt Nam</b> từ 2015.
             </p>
             <blockquote className="lcm-about__pull">
               "Một mái nhà — đầy đủ mọi nhu cầu thiết yếu của gia đình
@@ -50,7 +50,7 @@ function LCMAbout() {
                 <div className="lcm-fact__label">Vận hành</div>
               </div>
               <div className="lcm-fact">
-                <div className="lcm-fact__num">2021</div>
+                <div className="lcm-fact__num">2015</div>
                 <div className="lcm-fact__label">Gia nhập CRV</div>
               </div>
             </div>

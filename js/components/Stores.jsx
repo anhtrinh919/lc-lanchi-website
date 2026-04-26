@@ -46,30 +46,22 @@ function LCMStores() {
               <span className="count">{g.stores.length} cửa hàng</span>
             </div>
             <div className="lcm-stores__grid">
-              {g.stores.map((s, i) => (
+              {g.stores.map((s) => (
                 <a className="lcm-store" key={s.name} href="#">
                   <div className="lcm-store__photo">
-                    {i === 0 && <span className="lcm-store__badge">Flagship</span>}
-                    {s.photo ? (
-                      <img
-                        src={s.photo}
-                        alt={`Lan Chi ${s.name}`}
-                        style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div className="lcm-store__placeholder">
-                        <i className="ph ph-image"></i>
-                        <span>{s.name}</span>
-                      </div>
-                    )}
+                    <img
+                      src={s.photo || window.LCM_STORE_FALLBACK_PHOTO}
+                      alt={`Lan Chi ${s.name}`}
+                      style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}
+                      loading="lazy"
+                    />
                   </div>
                   <div className="lcm-store__body">
                     <h4 className="lcm-store__name">Lan Chi {s.name}</h4>
-                    <p className="lcm-store__addr">{s.address}</p>
-                    <span className="lcm-store__year">
-                      <i className="ph ph-calendar-blank"></i> Khai trương {s.opened}
-                    </span>
+                    <p className="lcm-store__addr">
+                      <i className="ph ph-map-pin" style={{marginRight:4,opacity:0.6}}></i>
+                      {s.district}, {g.province}
+                    </p>
                   </div>
                 </a>
               ))}
